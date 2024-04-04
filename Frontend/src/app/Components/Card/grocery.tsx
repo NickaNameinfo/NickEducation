@@ -1,6 +1,7 @@
 import * as React from "react";
 import "../style.scss";
 import {
+  Button,
   Card,
   CardBody,
   CardFooter,
@@ -8,6 +9,7 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 import { ProductDetail } from "../Product/ProductDetail";
+import { EyeFilledIcon, EyeSlashFilledIcon, IconStar } from "../Icons";
 
 export const GroceryCard = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -21,10 +23,11 @@ export const GroceryCard = () => {
         >
           <CardBody className="overflow-visible p-0 relative">
             <span className="bg-slate-700 z-50 absolute text-white text-xs font-medium px-2.5 py-1 rounded-ss-xl rounded-ee-xl dark:bg-gray-700 dark:text-gray-300">
-              Cod Available
+              Click preview
             </span>
+
             <span className="bg-slate-700 z-50 right-0 absolute text-white text-xs font-medium px-2.5 py-1 rounded-se-xl rounded-es-xl dark:bg-gray-700 dark:text-gray-300">
-              15KMsdas
+              25% Off
             </span>
             <Image
               isZoomed
@@ -32,193 +35,28 @@ export const GroceryCard = () => {
               shadow="md"
               width="100%"
               radius="lg"
-              className="w-full object-cover min-h-[176px]"
+              className="w-full object-cover min-h-[156px]"
               src="https://app.requestly.io/delay/1000/https://nextui.org/images/hero-card-complete.jpeg"
             />
           </CardBody>
           <CardFooter className="p-0">
             <div className="grid grid-cols-1 w-full">
               <div className="font-semibold mt-3 text-sm  TextMaincolor justify-start flex">
-                <p className="truncate">
-                  {" "}
-                  Apple1 - Shimla sam test and developred portal ui
-                </p>
+                <p className="truncate">C# and dot.net with real time ecaple</p>
               </div>
-              <div className="font-normal text-sm mt-2  TextMaincolor justify-start flex">
-                4 pcs (Approx. 550 - 640 g)
+              <div className="font-normal text-sm mt-1  TextMaincolor justify-start flex">
+                Duration: 02:44h
               </div>
-              <div className="w-full flex justify-between mt-3 mb-3">
-                <p className="font-normal text-sm  Pricecolor">120 Stocks</p>
+              <div className="flex mt-1 items-center">
+                <IconStar fill="#FF9900" />
+                <div className="textColortimingColor text-sm font-normal ms-2">
+                  3:6
+                </div>
+              </div>
+              <div className="w-full flex justify-between mt-1 mb-3">
+                <p className="font-normal text-sm  Pricecolor">Session : 35 </p>
                 <p className="font-normal text-sm  TextMaincolor">
-                  Rs : 124.34
-                </p>
-              </div>
-            </div>
-          </CardFooter>
-        </Card>
-        <Card
-          isPressable
-          onPress={() => onOpen()}
-          className="Storecard pt-3.5 px-3 cursor-pointer"
-        >
-          <CardBody className="overflow-visible p-0 relative">
-            <span className="bg-slate-700 z-50 absolute text-white text-xs font-medium px-2.5 py-1 rounded-ss-xl rounded-ee-xl dark:bg-gray-700 dark:text-gray-300">
-              Cod Available
-            </span>
-            <span className="bg-slate-700 z-50 right-0 absolute text-white text-xs font-medium px-2.5 py-1 rounded-se-xl rounded-es-xl dark:bg-gray-700 dark:text-gray-300">
-              15KMsdas
-            </span>
-            <Image
-              isZoomed
-              alt="Here no Image"
-              shadow="md"
-              width="100%"
-              radius="lg"
-              className="w-full object-cover min-h-[176px]"
-              src="https://app.requestly.io/delay/1000/https://nextui.org/images/hero-card-complete.jpeg"
-            />
-          </CardBody>
-          <CardFooter className="p-0">
-            <div className="grid grid-cols-1 w-full">
-              <div className="font-semibold mt-3 text-sm  TextMaincolor justify-start flex">
-                <p className="truncate">
-                  {" "}
-                  Apple1 - Shimla sam test and developred portal ui
-                </p>
-              </div>
-              <div className="font-normal text-sm mt-2  TextMaincolor justify-start flex">
-                4 pcs (Approx. 550 - 640 g)
-              </div>
-              <div className="w-full flex justify-between mt-3 mb-3">
-                <p className="font-normal text-sm  Pricecolor">120 Stocks</p>
-                <p className="font-normal text-sm  TextMaincolor">
-                  Rs : 124.34
-                </p>
-              </div>
-            </div>
-          </CardFooter>
-        </Card>
-        <Card
-          isPressable
-          onPress={() => onOpen()}
-          className="Storecard pt-3.5 px-3 cursor-pointer"
-        >
-          <CardBody className="overflow-visible p-0 relative">
-            <span className="bg-slate-700 z-50 absolute text-white text-xs font-medium px-2.5 py-1 rounded-ss-xl rounded-ee-xl dark:bg-gray-700 dark:text-gray-300">
-              Cod Available
-            </span>
-            <span className="bg-slate-700 z-50 right-0 absolute text-white text-xs font-medium px-2.5 py-1 rounded-se-xl rounded-es-xl dark:bg-gray-700 dark:text-gray-300">
-              15KMsdas
-            </span>
-            <Image
-              isZoomed
-              alt="Here no Image"
-              shadow="md"
-              width="100%"
-              radius="lg"
-              className="w-full object-cover min-h-[176px]"
-              src="https://app.requestly.io/delay/1000/https://nextui.org/images/hero-card-complete.jpeg"
-            />
-          </CardBody>
-          <CardFooter className="p-0">
-            <div className="grid grid-cols-1 w-full">
-              <div className="font-semibold mt-3 text-sm  TextMaincolor justify-start flex">
-                <p className="truncate">
-                  {" "}
-                  Apple1 - Shimla sam test and developred portal ui
-                </p>
-              </div>
-              <div className="font-normal text-sm mt-2  TextMaincolor justify-start flex">
-                4 pcs (Approx. 550 - 640 g)
-              </div>
-              <div className="w-full flex justify-between mt-3 mb-3">
-                <p className="font-normal text-sm  Pricecolor">120 Stocks</p>
-                <p className="font-normal text-sm  TextMaincolor">
-                  Rs : 124.34
-                </p>
-              </div>
-            </div>
-          </CardFooter>
-        </Card>
-        <Card
-          isPressable
-          onPress={() => onOpen()}
-          className="Storecard pt-3.5 px-3 cursor-pointer"
-        >
-          <CardBody className="overflow-visible p-0 relative">
-            <span className="bg-slate-700 z-50 absolute text-white text-xs font-medium px-2.5 py-1 rounded-ss-xl rounded-ee-xl dark:bg-gray-700 dark:text-gray-300">
-              Cod Available
-            </span>
-            <span className="bg-slate-700 z-50 right-0 absolute text-white text-xs font-medium px-2.5 py-1 rounded-se-xl rounded-es-xl dark:bg-gray-700 dark:text-gray-300">
-              15KMsdas
-            </span>
-            <Image
-              isZoomed
-              alt="Here no Image"
-              shadow="md"
-              width="100%"
-              radius="lg"
-              className="w-full object-cover min-h-[176px]"
-              src="https://app.requestly.io/delay/1000/https://nextui.org/images/hero-card-complete.jpeg"
-            />
-          </CardBody>
-          <CardFooter className="p-0">
-            <div className="grid grid-cols-1 w-full">
-              <div className="font-semibold mt-3 text-sm  TextMaincolor justify-start flex">
-                <p className="truncate">
-                  {" "}
-                  Apple1 - Shimla sam test and developred portal ui
-                </p>
-              </div>
-              <div className="font-normal text-sm mt-2  TextMaincolor justify-start flex">
-                4 pcs (Approx. 550 - 640 g)
-              </div>
-              <div className="w-full flex justify-between mt-3 mb-3">
-                <p className="font-normal text-sm  Pricecolor">120 Stocks</p>
-                <p className="font-normal text-sm  TextMaincolor">
-                  Rs : 124.34
-                </p>
-              </div>
-            </div>
-          </CardFooter>
-        </Card>
-        <Card
-          isPressable
-          onPress={() => onOpen()}
-          className="Storecard pt-3.5 px-3 cursor-pointer"
-        >
-          <CardBody className="overflow-visible p-0 relative">
-            <span className="bg-slate-700 z-50 absolute text-white text-xs font-medium px-2.5 py-1 rounded-ss-xl rounded-ee-xl dark:bg-gray-700 dark:text-gray-300">
-              Cod Available
-            </span>
-            <span className="bg-slate-700 z-50 right-0 absolute text-white text-xs font-medium px-2.5 py-1 rounded-se-xl rounded-es-xl dark:bg-gray-700 dark:text-gray-300">
-              15KMsdas
-            </span>
-            <Image
-              isZoomed
-              alt="Here no Image"
-              shadow="md"
-              width="100%"
-              radius="lg"
-              className="w-full object-cover min-h-[176px]"
-              src="https://app.requestly.io/delay/1000/https://nextui.org/images/hero-card-complete.jpeg"
-            />
-          </CardBody>
-          <CardFooter className="p-0">
-            <div className="grid grid-cols-1 w-full">
-              <div className="font-semibold mt-3 text-sm  TextMaincolor justify-start flex">
-                <p className="truncate">
-                  {" "}
-                  Apple1 - Shimla sam test and developred portal ui
-                </p>
-              </div>
-              <div className="font-normal text-sm mt-2  TextMaincolor justify-start flex">
-                4 pcs (Approx. 550 - 640 g)
-              </div>
-              <div className="w-full flex justify-between mt-3 mb-3">
-                <p className="font-normal text-sm  Pricecolor">120 Stocks</p>
-                <p className="font-normal text-sm  TextMaincolor">
-                  Rs : 124.34
+                  Price : 467.00
                 </p>
               </div>
             </div>

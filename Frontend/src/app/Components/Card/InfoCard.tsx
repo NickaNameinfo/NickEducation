@@ -25,7 +25,7 @@ export const InfoCard = (props: {
         <ModalContent className="px-5 pb-3">
           <>
             <ModalHeader className="py-3 px-0 flex items-center justify-start text-black font-semibold text-base">
-            Information
+            info
             </ModalHeader>
             <ModalBody className="p-0 m-0 mt-3">
               <div className="font-normal text-sm text-black">
