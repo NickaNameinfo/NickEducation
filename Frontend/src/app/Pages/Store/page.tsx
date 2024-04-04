@@ -9,7 +9,7 @@ const Store = () => {
     <>
       <StoreHeaderCard />
       <GroceryCard/>
-      <PremiumCard />
+      {/* <PremiumCard /> */}
     </>
   );
 };

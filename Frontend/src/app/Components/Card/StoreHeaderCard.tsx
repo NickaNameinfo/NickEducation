@@ -11,13 +11,13 @@ import {
   IconStar,
   Iconwhatsup,
 } from "../Icons";
-import { Button, Image } from "@nextui-org/react";
+import { Button, Image, Link } from "@nextui-org/react";
 
 export const StoreHeaderCard = () => {
   return (
     <div className="grid xm:grid-cols-1 mm:grid-cols-1  sm:grid-cols-1 ml:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 3xl:grid-cols-3 4xl:grid-cols-3  StorecardHeader  mb-2">
-      <div className="grid xm:grid-cols-3">
-        <div className="xm:p-2  items-center flex justify-center">
+      <div className="flex flex-row  xl:col-span-2 ">
+        <div className="xm:p-2 items-center flex  xl:basis-1/6 xl:justify-start">
           <Image
             isZoomed
             alt="Here no Image"
@@ -25,32 +25,58 @@ export const StoreHeaderCard = () => {
             src="https://nextui-docs-v2.vercel.app/images/album-cover.png"
           />
         </div>
-        <div className="col-span-2">
+        <div className=" xl:basis-basis-10/12 ">
           <div className="xm:mt-1 mm:mt-2 maincolor text-sm font-semibold items-center">
-            Lorem dolor Samz..
+            Sam'z Education platform
           </div>
           <div className="flex items-center">
-            <IconStar fill="#FF9900" />
-            <div className="textColortimingColor text-sm font-normal ms-2">
-              4:2
+            <Button
+              radius="none"
+              size="sm"
+              color="warning"
+              className="p-0 m-0 h-unit-6"
+            >
+              Bestseller
+            </Button>
+
+            <div className="textColortimingColor text-sm font-normal ms-2 flex">
+              <p className="flex">4:2</p>
+              <p className="mt-0.5 mx-1">
+                <IconStar fill="#FF9900" />
+              </p>
+              <p>
+                (
+                <Link className="p-0 m-0" href="#" size="sm">
+                  33445 ratigns
+                </Link>
+                )246387 Students
+              </p>
             </div>
           </div>
           <div className="textColortimingColor flex items-center lg:text-sm">
-            <div className="lg:text-sm mm:text-sm ml:text-sm xm:text-xs xm:font-normal mm:font-normal">
-              Open :
+            <div className=" my-1 lg:text-sm mm:text-sm ml:text-sm xm:text-xs xl:text-xs xm:font-normal mm:font-normal">
+              Total Course :
             </div>
-            <div className="ms-1 xm:text-xs xm:font-normal">
-              09:30am-10:00pm
-            </div>
+            <div className="ms-1 xm:text-xs xm:font-normal">23 </div>
           </div>
-          <div className="textColortimingColor lg:mt-0.5 text-sm font-normal  flex items-center">
-            <div> Products :</div>
-            <div className="ms-1">150</div>
+          <div className="textColortimingColor flex items-center lg:text-sm">
+            <div className=" xl:text-xs lg:text-sm mm:text-sm ml:text-sm xm:text-xs xm:font-normal mm:font-normal">
+              Last updated :
+            </div>
+            <div className="ms-1 xm:text-xs xm:font-normal">02/2024</div>
+            <div className="ms-2 xm:text-xs xm:font-normal">
+              <IconMapRound
+                fill="#000"
+                width="20"
+                height="22"
+                className="cursor-pointer ml:h-[16px] ml:w-[18px] xm:h-[12px] xm:w-[16px]"
+              />
+            </div>
+            <div className="ms-1 xm:text-xs xm:font-normal">English</div>
           </div>
         </div>
-        <div></div>
       </div>
-      <div className="md:order-3 "></div>
+      <div className="md:order-3 xl:hidden"></div>
       <div className="xl:order-3 2xl:order-3 3xl:order-3  flex w-full items-center justify-between px-2 md:pb-2 xm:pb-2 mm:pb-2 ml:pb-2 sm:pb-2 lg:pb-2">
         <div className="pe-2 w-8/12 flex items-center justify-between">
           <div className="flex items-center justify-around ">

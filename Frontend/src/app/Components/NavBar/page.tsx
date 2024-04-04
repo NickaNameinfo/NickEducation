@@ -1,5 +1,9 @@
 import {
   Button,
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  DropdownTrigger,
   Input,
   Pagination,
   Select,
@@ -11,6 +15,7 @@ import * as React from "react";
 import "../style.scss";
 import {
   IconCall,
+  IconHeart,
   IconHome,
   IconInfo,
   IconMap,
@@ -45,7 +50,7 @@ export const NavBar = () => {
             </Link>
           </div>
           <div className="xm:hidden md:block w-webkit-fill-available">
-            <Input
+            {/* <Input
               isClearable
               radius="full"
               size="sm"
@@ -53,25 +58,56 @@ export const NavBar = () => {
               className="ms-2"
               classNames={{
                 // label: "text-white",
-                // input: [
-                //   "bg-transparent",
-                //   "text-white dark:text-white",
-                //   "text-white",
-                //   "placeholder:text-text-white dark:placeholder:text-",
-                // ],
-                // innerWrapper: "bg-transparent",
-                // inputWrapper: [
-                //   "shadow-xl",
-                //   "bg-blue-600",
-                //   "bg-blue-600",
-                //   "backdrop-blur-xl",
-                //   "backdrop-saturate-900",
-                //   "hover:bg-blue-600",
-                //   "hover:bg-blue-600",
-                //   "group-data-[focused=true]:bg-blue-600",
-                //   ":group-data-[focused=true]:bg-blue-600",
-                //   "!cursor-text",
-                // ],
+                input: [
+                  //   "bg-transparent",
+                  //   "text-white dark:text-white",
+                  //   "text-white",
+                  //   "placeholder:text-text-white dark:placeholder:text-",
+                  // ],
+                  // innerWrapper: "bg-transparent",
+                  // inputWrapper: [
+                  //   "shadow-xl",
+                  //   "bg-blue-200",
+                  //   "bg-blue-600",
+                  //   "backdrop-blur-xl",
+                  //   "backdrop-saturate-900",
+                  "hover:bg-default-200/30",
+                  //   "hover:bg-blue-600",
+                  "group-data-[focused=true]:bg-blue-600",
+                  //   ":group-data-[focused=true]:bg-blue-600",
+                  "!cursor-text",
+                ],
+              }}
+              placeholder="Type to search..."
+              startContent={
+                <NavSearchIcon className="text-black/50 mb-0.5 dark:text-white/90 text-slate-400 pointer-events-none flex-shrink-0" />
+              }
+            /> */}
+            <Input
+              variant="flat"
+              size="sm"
+              className="ms-2"
+              radius="full"
+              classNames={{
+                label: "text-black/50 dark:text-black/50",
+                input: [
+                  "bg-transparent",
+                  "text-white dark:text-black/50",
+                  "text-black/50",
+                  "placeholder:text-text-black/50 dark:placeholder:black/50",
+                ],
+                innerWrapper: "bg-transparent",
+                inputWrapper: [
+                  "shadow-xl",
+                  "bg-red-600",
+                  "backdrop-blur-xl",
+                  // "backdrop-saturate-200",
+                  // "hover:bg-default-200/30",
+                  "hover:bg-black/50",
+                  "group-data-[focused=true]:bg-black/50",
+                  ":group-data-[focused=true]:bg-black/50",
+                  "!cursor-text",
+                ],
               }}
               placeholder="Type to search..."
               startContent={
@@ -96,6 +132,7 @@ export const NavBar = () => {
             <Button
               onPress={() => onOpen()}
               isIconOnly
+              size="md"
               color="warning"
               aria-label="Like"
               className="bg-warning-900"
@@ -106,118 +143,42 @@ export const NavBar = () => {
           <div className="ms-3">
             <Login />
           </div>
+          <div className="ms-2">
+            <Dropdown>
+              <DropdownTrigger>
+                <Button
+                  isIconOnly
+                  variant="ghost"
+                  radius="full"
+                  color="danger"
+                  size="md"
+                  aria-label="Like"
+                  className="font-extrabold text-xl  "
+                >
+                  <span className="flex justify-self-start">...</span>
+                </Button>
+              </DropdownTrigger>
+              <DropdownMenu
+                aria-label="Action event example"
+                onAction={(key) => alert(key)}
+              >
+                <DropdownItem key="new">New file</DropdownItem>
+                <DropdownItem key="copy">Copy link</DropdownItem>
+                <DropdownItem key="edit">Edit file</DropdownItem>
+                <DropdownItem
+                  key="delete"
+                  className="text-danger"
+                  color="danger"
+                >
+                  Delete file
+                </DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
+          </div>
         </div>
       </div>
       <div className="flex justify-between mt-2">
-        <div className="w-3/12  justify-between flex overflow-auto ms-2 me-5">
-          <div className="flex items-center justify-around">
-            <Link href={"/Pages/Store"}>
-              <Tooltip
-                showArrow={false}
-                color="primary"
-                offset={3}
-                content=" Store View"
-              >
-                <Button
-                  radius="lg"
-                  // variant="shadow"
-                  isIconOnly
-                  aria-label="Like"
-                  className=" Iconwhatsup ml:min-w-unit-8 ml:w-unit-8 ml:h-unit-8 mm:min-w-unit-8 mm:w-unit-8 mm:h-unit-8 xm:min-w-unit-6 xm:w-unit-6 xm:h-unit-6"
-                  size="lg"
-                >
-                  <Iconwhatsup
-                    fill="#FFFFFF"
-                    width="20"
-                    height="22"
-                    className="cursor-pointer ml:h-[16px] ml:w-[18px] xm:h-[12px] xm:w-[16px]"
-                  />
-                </Button>
-              </Tooltip>
-            </Link>
-          </div>
-          <div className="flex items-center justify-around">
-            <Link href={"/Pages/Product"}>
-              <Tooltip
-                showArrow={false}
-                color="primary"
-                offset={3}
-                content="Product View"
-              >
-                <Button
-                  radius="lg"
-                  // variant="shadow"
-                  isIconOnly
-                  aria-label="Like"
-                  className="IconCall ml:min-w-unit-8 ml:w-unit-8 ml:h-unit-8 mm:min-w-unit-8 mm:w-unit-8 mm:h-unit-8 xm:min-w-unit-6 xm:w-unit-6 xm:h-unit-6"
-                  size="lg"
-                >
-                  <IconCall
-                    fill="#FFFFFF"
-                    width="20"
-                    height="22"
-                    className="cursor-pointer ml:h-[16px] ml:w-[18px] xm:h-[12px] xm:w-[16px]"
-                  />
-                </Button>
-              </Tooltip>
-            </Link>
-          </div>
-          <div className="flex items-center justify-around">
-            <Link href={"/Pages/Vendor"}>
-              <Tooltip
-                showArrow={false}
-                color="primary"
-                offset={3}
-                content="Vendor View"
-              >
-                <Button
-                  radius="lg"
-                  // variant="shadow"
-                  isIconOnly
-                  aria-label="Like"
-                  className="Iconwhatsup  ml:min-w-unit-8 ml:w-unit-8 ml:h-unit-8 mm:min-w-unit-8 mm:w-unit-8 mm:h-unit-8 xm:min-w-unit-6 xm:w-unit-6 xm:h-unit-6"
-                  size="md"
-                >
-                  <Iconwhatsup
-                    fill="#FFFFFF"
-                    width="20"
-                    height="22"
-                    className="cursor-pointer ml:h-[16px] ml:w-[18px] xm:h-[12px] xm:w-[16px]"
-                  />
-                </Button>
-              </Tooltip>
-            </Link>
-          </div>
-          <div className="flex items-center justify-around">
-            <Link href={""}>
-              <Tooltip
-                showArrow={false}
-                color="primary"
-                offset={3}
-                content="Map View"
-              >
-                <Button
-                  radius="lg"
-                  // color="primary"
-                  // variant="shadow"
-                  isIconOnly
-                  aria-label="Like"
-                  className=" ml:min-w-unit-8 ml:w-unit-8 ml:h-unit-8 mm:min-w-unit-8 mm:w-unit-8 mm:h-unit-8 xm:min-w-unit-6 xm:w-unit-6 xm:h-unit-6"
-                  size="lg"
-                >
-                  <IconMap
-                    fill="#FFFFFF"
-                    width="20"
-                    height="22"
-                    className="cursor-pointer ml:h-[16px] ml:w-[18px] xm:h-[12px] xm:w-[16px]"
-                  />
-                </Button>
-              </Tooltip>
-            </Link>
-          </div>
-        </div>
-
-        <div className="w-9/12 ms-4 me-4">
+        <div className="w-full ms-4 me-4">
           <div className="flex w-full justify-between">
             <Button
               radius="lg"
@@ -235,12 +196,24 @@ export const NavBar = () => {
               />
             </Button>
 
-            <Button size="sm" className="font-medium text-sm">Preoduct </Button>
-            <Button size="sm" className="font-medium text-sm">vedar</Button>
-            <Button size="sm" className="font-medium text-sm">call</Button>
-            <Button size="sm" className="font-medium text-sm">admin</Button>
-            <Button size="sm" className="font-medium text-sm">map</Button>
-            <Button size="sm" className="font-medium text-sm">Small</Button>
+            <Button size="sm" className="font-medium text-sm">
+              Preoduct{" "}
+            </Button>
+            <Button size="sm" className="font-medium text-sm">
+              vedar
+            </Button>
+            <Button size="sm" className="font-medium text-sm">
+              call
+            </Button>
+            <Button size="sm" className="font-medium text-sm">
+              admin
+            </Button>
+            <Button size="sm" className="font-medium text-sm">
+              map
+            </Button>
+            <Button size="sm" className="font-medium text-sm">
+              Small
+            </Button>
             <Button
               radius="lg"
               // variant="shadow"

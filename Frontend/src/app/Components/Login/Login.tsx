@@ -60,6 +60,7 @@ export const Login = () => {
     <>
       <Button
         isIconOnly
+        size="md"
         color="primary"
         className="bg-primary-900"
         aria-label="Take a photo"
@@ -73,17 +74,6 @@ export const Login = () => {
         onOpenChange={onCloseModal}
         placement="top-center"
         size="xl"
-        // closeButton={
-        //   <>
-        //     <IconCLose
-        //       width={30}
-        //       height={30}
-        //       className={
-        //         "p-2 cursor-pointer rounded-full IconCloseBtn absolute -top-3 -right-3"
-        //       }
-        //     />
-        //   </>
-        // }
       >
         <ModalContent className="p-0 m-0">
           {(onClose) => (
